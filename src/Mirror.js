@@ -1,4 +1,6 @@
-import './mirror.css';
+
+import { Container } from './Styles/Container';
+import { MirrorStyle } from './Styles/MirrorStyle';
 export function Mirror(){
     function getVideo(){
         navigator.mediaDevices?.enumerateDevices().then(response => console.log)
@@ -16,8 +18,8 @@ export function Mirror(){
     }
     getVideo();
     return(
-        <div className="container">
-            <video id="mirror" autoPlay></video>
-        </div>
+        <Container>
+            <MirrorStyle id="mirror" autoPlay/>
+        </Container>
     )
 }

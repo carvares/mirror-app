@@ -1,8 +1,9 @@
 import { Mirror } from "./Mirror";
-import './reset.css';
+import { GlobalStyles } from "./Styles/GlobalStyles";
 function App() {
   return (
     <>
+    <GlobalStyles />
     <Mirror />
     </>
   );
