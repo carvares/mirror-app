@@ -10,7 +10,7 @@ export function Mirror(){
 
         navigator?.mediaDevices?.getUserMedia({
             video:{
-                facingMode: 'environment'
+                facingMode:facing
             }
         })
         .then(stream => {
@@ -33,7 +33,7 @@ export function Mirror(){
         <Container>
             <MirrorStyle>
                 <video id="mirror" autoPlay ></video>
-            <ChangeButton onClick={()=> changeView()}></ChangeButton>
+            <ChangeButton onClick={()=> {changeView()}}></ChangeButton>
             </MirrorStyle>
         </Container>
     )
