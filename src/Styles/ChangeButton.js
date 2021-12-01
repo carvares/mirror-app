@@ -10,4 +10,8 @@ export const ChangeButton = styled.button`
     background-color: lightgreen;
     border-radius: 50%;
     border:solid 1px darkgreen;
+    svg{
+        width: 100%;
+        height: 100%;
+    }
 `
