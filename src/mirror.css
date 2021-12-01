@@ -1,0 +1,10 @@
+#mirror{
+    width: 50vw;
+    height: auto;
+    border-radius: 5px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
