@@ -6,15 +6,15 @@ import { MirrorStyle } from './Styles/MirrorStyle';
 import {FiRefreshCcw} from 'react-icons/fi'
 export function Mirror(){
 
-    var [facing, setFacing] = useState('user');
+    var [facing, setFacing] = useState(true);
 
     function getVideo(){
-
+        
 
         navigator?.mediaDevices?.getUserMedia({
             video:{
                 facingMode:{
-                    ideal:facing
+                    ideal: facing? 'user':'environment'
                 }
             }
         })
@@ -28,23 +28,14 @@ export function Mirror(){
             }
 
 
-    function changeView(){
-        if(facing === 'user'){
-            setFacing('environment')
-            return
-        } 
-        setFacing('user')
-    }
-    
-    useEffect(() => {
-        getVideo();
-    });
 
+    useEffect(()=>getVideo(),[facing])
+  
     return(
         <Container>
             <MirrorStyle>
                 <video id="mirror" autoPlay ></video>
-            <ChangeButton onClick={()=> {changeView()}}><FiRefreshCcw/></ChangeButton>
+            <ChangeButton onClick={()=> {setFacing(!facing)}}><FiRefreshCcw/></ChangeButton>
             </MirrorStyle>
         </Container>
     )
