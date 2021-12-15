@@ -6,5 +6,5 @@ export const Container = styled.div`
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: lightgray;
+    background-image: linear-gradient(to bottom right, #7115a3, #400080);
 `
