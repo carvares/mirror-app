@@ -7,6 +7,6 @@ export const MirrorStyle =  styled.video`
     margin: 5px;
     @media(max-width:1000px){
         width: 100vw;
-        border-radius: 0;
+        border-radius: 5px;
     }
 `

@@ -7,4 +7,7 @@ export const Container = styled.div`
     width: 100vw;
     height: 100vh;
     background-image: linear-gradient(to bottom right, #7115a3, #400080);
+    @media (max-width: 1000px){
+        flex-direction: column;
+    }
 `
